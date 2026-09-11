@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        Produto[] produto =  new Produto[2];
+
+         produto[0] = new ProdutoEletronico
+        ("Pc",2500.0,12);
+         produto[1] = new ProdutoAlimenticio
+        ("Arroz", 50.0, "22/12/26");
+
+        for (int i = 0; i < produto.length; i++) {
+            produto[i].exibirInfo();
+            produto[i].mostrarDetalheEspecifico();
+        }
+
+        for(int i=0;i<produto.length;i++){
+            System.out.printf("Desconto de %s é de R$ %.2f\n",produto[i].nome, produto[i].calcularDesconto());
+        }
+    }
+}
